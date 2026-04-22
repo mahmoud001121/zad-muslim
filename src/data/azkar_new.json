@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "category": "أذكار الصباح",
+    "count": 1,
+    "content": "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+    "description": "From the morning and evening adhkar of the Prophet ﷺ",
+    "reference": "مسلم 4/2088"
+  },
+  {
+    "id": 2,
+    "category": "أذكار الصباح",
+    "count": 1,
+    "content": "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ",
+    "description": "Morning supplication entrusting all affairs to Allah",
+    "reference": "الترمذي 5/466"
+  },
+  {
+    "id": 3,
+    "category": "أذكار الصباح",
+    "count": 3,
+    "content": "سُبْحَانَ اللهِ وَبِحَمْدِهِ",
+    "description": "Whoever says this 100 times in the morning, no sins will be recorded against him that day even if they are as many as the foam of the sea",
+    "reference": "متفق عليه"
+  },
+  {
+    "id": 4,
+    "category": "أذكار الصباح",
+    "count": 3,
+    "content": "اللَّهُمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ",
+    "description": "Sayyid al-Istighfar (The Master of Seeking Forgiveness). Whoever says it in the morning with conviction and dies that day will enter Paradise.",
+    "reference": "البخاري 7/150"
+  },
+  {
+    "id": 5,
+    "category": "أذكار الصباح",
+    "count": 3,
+    "content": "بِسْمِ اللهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    "description": "Nothing will harm the one who says this three times in the morning or evening",
+    "reference": "أبو داود والترمذي 4/338"
+  },
+  {
+    "id": 6,
+    "category": "أذكار الصباح",
+    "count": 4,
+    "content": "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ",
+    "description": "Seeking wellness in body, hearing, and sight",
+    "reference": "أبو داود 4/324"
+  },
+  {
+    "id": 7,
+    "category": "أذكار الصباح",
+    "count": 7,
+    "content": "حَسْبِيَ اللهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
+    "description": "Whoever says this seven times in the morning and evening, Allah will suffice him for everything that concerns him",
+    "reference": "أبو داود 4/321"
+  },
+  {
+    "id": 8,
+    "category": "أذكار الصباح",
+    "count": 7,
+    "content": "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ",
+    "description": "A treasure from the treasures of Paradise",
+    "reference": "البخاري 11/532 ومسلم 4/2075"
+  }
