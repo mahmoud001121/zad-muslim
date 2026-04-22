@@ -1,0 +1,18 @@
+--- /dev/null
++++ Update File: components/settings/SettingsPage.tsx
+@@ -796,9 +796,9 @@
+                         onSelect={(v) => updateSettings({ salawatInterval: v as number })}
+                       />
+                     </SettingCard>
+-                  </div>
+-                )}
+-              </motion.div>
+-            )}
+-          </AnimatePresence>
+-        </section>
++                  )}
++                </div>
++              </motion.div>
++            )}
++          </AnimatePresence>
++        </section>
