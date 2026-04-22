@@ -1,0 +1,70 @@
+*** Begin Patch
+*** Update File: src/hooks/usePushNotifications.ts
+@@ -1,4 +1,4 @@
+ 'use client';
+ 
+ import { useEffect, useRef, useCallback, useState } from 'react';
+@@ -6,6 +6,20 @@
+ 
+ interface PushState {
+   supported: boolean;
++  ios: boolean;
++  iosPWA: boolean;
+   permission: NotificationPermission;
+   subscribed: boolean;
+@@ -19,6 +33,8 @@
+ 
+   const [state, setState] = useState<PushState>({
+     supported: false,
++    ios: false,
++    iosPWA: false,
+     permission: 'default',
+     subscribed: false,
+@@ -30,6 +44,12 @@
+   useEffect(() => {
+     const supported = 'serviceWorker' in navigator && 'PushManager' in window;
+     setState((prev) => ({
++      ...prev,
++      supported,
++      permission: supported && 'Notification' in window ? Notification.permission : 'denied',
++    }));
++    // Check for iOS and PWA status
++    const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
++    const iosPWA = (navigator as any).standalone === true;
++    setState((prev) => ({
+       ...prev,
+-      supported,
+-      permission: supported && 'Notification' in window ? Notification.permission : 'denied',
++      ios,
++      iosPWA,
+     }));
+   }, []);
+@@ -110,6 +130,15 @@
+       const { publicKey } = await vapidRes.json();
+       if (!publicKey) throw new Error('No VAPID key');
+ 
++      // Check iOS limitations
++      if (state.ios && !state.iosPWA) {
++        setState((prev) => ({ 
++          ...prev, 
++          loading: false,
++          error: 'iOS requires adding app to home screen for notifications. Please install as PWA first.'
++        }));
++        return false;
++      }
++
+       // 2) Request notification permission
+       const permission = await Notification.requestPermission();
+       setState((prev) => ({ ...prev, permission }));
+       if (permission !== 'granted') {
++        setState((prev) => ({ 
++          ...prev, 
++          loading: false,
++          error: permission === 'denied' 
++            ? 'Notification permission was denied. Please enable notifications in browser settings.' 
++            : 'Notification permission not granted.'
++        }));
+         setState((prev) => ({ ...prev, loading: false }));
+         return false;
+       }
+*** End Patch

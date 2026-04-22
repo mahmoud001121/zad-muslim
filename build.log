@@ -1,0 +1,29 @@
+
+> nextjs_tailwind_shadcn_ts@0.2.0 build
+> next build --webpack
+
+▲ Next.js 16.1.3 (webpack)
+- Environments: .env.production, .env
+
+  Creating an optimized production build ...
+✓ (serwist) Bundling the service worker script with the URL '/sw.js' and the scope '/'...
+Failed to compile.
+
+./src/lib/db.ts
+Module not found: Can't resolve '@prisma/adapter-libsql'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/push/cron/route.ts
+
+./src/lib/db.ts
+Module not found: Can't resolve '@libsql/client'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/push/cron/route.ts
+
+
+> Build failed because of webpack errors

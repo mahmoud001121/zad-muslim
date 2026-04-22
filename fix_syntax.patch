@@ -1,0 +1,20 @@
+*** Begin Patch
+*** Update File: src/components/settings/SettingsPage.tsx
+@@ -796,11 +796,11 @@
+                         onSelect={(v) => updateSettings({ salawatInterval: v as number })}
+                       />
+                     </SettingCard>
+-                  )}
+-              </motion.div>
+-            )}
+-          </AnimatePresence>
+-        </section>
++                  </motion.div>
++                )}
++              )}
++            </AnimatePresence>
++          </section>
+ 
+         {/* Quran Settings */}
+         <section>
+*** End Patch

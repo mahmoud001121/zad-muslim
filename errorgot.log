@@ -1,0 +1,178 @@
+2026-04-21T09:49:16.338436773Z [inf]  
+2026-04-21T09:49:17.265594751Z [inf]  [35m[Region: us-west1][0m
+2026-04-21T09:49:17.287224073Z [err]  INFO No package manager inferred, using npm default
+2026-04-21T09:49:17.287264420Z [err]  
+2026-04-21T09:49:17.339581695Z [inf]  
+2026-04-21T09:49:17.339623746Z [inf]  [38;2;125;86;243m╭─────────────────╮[0m
+2026-04-21T09:49:17.339630864Z [inf]  [38;2;125;86;243m│[0m Railpack 0.23.0 [38;2;125;86;243m│[0m
+2026-04-21T09:49:17.339636395Z [inf]  [38;2;125;86;243m╰─────────────────╯[0m
+2026-04-21T09:49:17.339643624Z [inf]  
+2026-04-21T09:49:17.339649457Z [inf]  [97m↳ Detected Node[0m
+2026-04-21T09:49:17.339653539Z [inf]  [97m↳ Using npm package manager[0m
+2026-04-21T09:49:17.339657508Z [inf]  
+2026-04-21T09:49:17.339661453Z [inf]  [1mPackages[0m
+2026-04-21T09:49:17.339665531Z [inf]  [38;5;238m──────────[0m
+2026-04-21T09:49:17.339669399Z [inf]  [95mnode[0m  [38;5;238m│[0m  [96m22.22.2[0m  [38;5;238m│[0m  railpack default (22)
+2026-04-21T09:49:17.339673435Z [inf]  
+2026-04-21T09:49:17.339677259Z [inf]  [1mSteps[0m
+2026-04-21T09:49:17.339681972Z [inf]  [38;5;238m──────────[0m
+2026-04-21T09:49:17.339685879Z [inf]  [95m▸ install[0m
+2026-04-21T09:49:17.339689729Z [inf]  [38;5;245m$[0m [1mnpm ci[0m
+2026-04-21T09:49:17.339693572Z [inf]  
+2026-04-21T09:49:17.339697591Z [inf]  [95m▸ build[0m
+2026-04-21T09:49:17.339701560Z [inf]  [38;5;245m$[0m [1mnpm run build[0m
+2026-04-21T09:49:17.339705316Z [inf]  
+2026-04-21T09:49:17.339709072Z [inf]  [1mDeploy[0m
+2026-04-21T09:49:17.339719696Z [inf]  [38;5;238m──────────[0m
+2026-04-21T09:49:17.339724502Z [inf]  [38;5;245m$[0m [1mnpm run start[0m
+2026-04-21T09:49:17.339730415Z [inf]  
+2026-04-21T09:49:17.339734834Z [inf]  
+2026-04-21T09:49:17.341686997Z [inf]  Successfully prepared Railpack plan for build
+2026-04-21T09:49:17.341737657Z [inf]  
+2026-04-21T09:49:17.341746037Z [inf]  
+2026-04-21T09:49:17.342152697Z [inf]  context: xr34-p
+2026-04-21T09:49:17.627001931Z [inf]  [internal] load build definition from railpack-plan.json
+2026-04-21T09:49:17.627059702Z [inf]  [internal] load build definition from railpack-plan.json
+2026-04-21T09:49:17.627076084Z [inf]  [internal] load build definition from railpack-plan.json
+2026-04-21T09:49:17.651365024Z [inf]  [internal] load build definition from railpack-plan.json
+2026-04-21T09:49:17.654516890Z [inf]  resolve image config for docker-image://ghcr.io/railwayapp/railpack-frontend:v0.23.0
+2026-04-21T09:49:17.931281489Z [inf]  resolve image config for docker-image://ghcr.io/railwayapp/railpack-frontend:v0.23.0
+2026-04-21T09:49:17.931548183Z [inf]  docker-image://ghcr.io/railwayapp/railpack-frontend:v0.23.0@sha256:ba4c430961d9ee3215c64807727a4b11e2198daac31250e9db9eaf9cee4624d6
+2026-04-21T09:49:17.931593095Z [inf]  docker-image://ghcr.io/railwayapp/railpack-frontend:v0.23.0@sha256:ba4c430961d9ee3215c64807727a4b11e2198daac31250e9db9eaf9cee4624d6
+2026-04-21T09:49:17.938472887Z [inf]  docker-image://ghcr.io/railwayapp/railpack-frontend:v0.23.0@sha256:ba4c430961d9ee3215c64807727a4b11e2198daac31250e9db9eaf9cee4624d6
+2026-04-21T09:49:17.938768179Z [inf]  docker-image://ghcr.io/railwayapp/railpack-frontend:v0.23.0@sha256:ba4c430961d9ee3215c64807727a4b11e2198daac31250e9db9eaf9cee4624d6
+2026-04-21T09:49:18.421272392Z [inf]  load build definition from railpack-plan.json
+2026-04-21T09:49:18.421338521Z [inf]  load build definition from railpack-plan.json
+2026-04-21T09:49:18.421355303Z [inf]  load build definition from railpack-plan.json
+2026-04-21T09:49:18.438842347Z [inf]  load build definition from railpack-plan.json
+2026-04-21T09:49:18.461111113Z [inf]  copy /root/.local/state/mise
+2026-04-21T09:49:18.461142398Z [inf]  copy /etc/mise/config.toml
+2026-04-21T09:49:18.461159285Z [inf]  copy /usr/local/bin/mise
+2026-04-21T09:49:18.461169702Z [inf]  copy /mise/installs
+2026-04-21T09:49:18.461182903Z [inf]  copy /mise/shims
+2026-04-21T09:49:18.461198782Z [inf]  install mise packages: node
+2026-04-21T09:49:18.461210983Z [inf]  create mise config
+2026-04-21T09:49:18.461226742Z [inf]  mkdir /etc/mise
+2026-04-21T09:49:18.461238513Z [inf]  docker-image://ghcr.io/railwayapp/railpack-builder:mise-2026.3.17
+2026-04-21T09:49:18.461254829Z [inf]  install apt packages: libatomic1
+2026-04-21T09:49:18.461265876Z [inf]  docker-image://ghcr.io/railwayapp/railpack-runtime:mise-2026.3.17
+2026-04-21T09:49:18.461337838Z [inf]  [railpack] merge $packages:apt:runtime, $packages:mise, $build, $build
+2026-04-21T09:49:18.461354621Z [inf]  copy /app
+2026-04-21T09:49:18.461365651Z [inf]  copy /root/.cache
+2026-04-21T09:49:18.461378371Z [inf]  copy /app/node_modules
+2026-04-21T09:49:18.461394675Z [inf]  npm run build
+2026-04-21T09:49:18.461405646Z [inf]  [railpack] secrets hash
+2026-04-21T09:49:18.461422111Z [inf]  copy / /app
+2026-04-21T09:49:18.461435271Z [inf]  npm ci
+2026-04-21T09:49:18.461446882Z [inf]  mkdir -p /app/node_modules/.cache
+2026-04-21T09:49:18.461472336Z [inf]  copy / /app
+2026-04-21T09:49:18.461485081Z [inf]  loading .
+2026-04-21T09:49:18.461518173Z [inf]  docker-image://ghcr.io/railwayapp/railpack-runtime:mise-2026.3.17
+2026-04-21T09:49:18.461535045Z [inf]  docker-image://ghcr.io/railwayapp/railpack-builder:mise-2026.3.17
+2026-04-21T09:49:18.461546597Z [inf]  [railpack] secrets hash
+2026-04-21T09:49:18.461567333Z [inf]  [railpack] secrets hash
+2026-04-21T09:49:18.461588418Z [inf]  loading .
+2026-04-21T09:49:18.631285478Z [inf]  docker-image://ghcr.io/railwayapp/railpack-runtime:mise-2026.3.17
+2026-04-21T09:49:18.648814030Z [inf]  mkdir /etc/mise
+2026-04-21T09:49:18.648866098Z [inf]  create mise config
+2026-04-21T09:49:18.648887167Z [inf]  install mise packages: node
+2026-04-21T09:49:18.648905789Z [inf]  [railpack] secrets hash
+2026-04-21T09:49:18.648913937Z [inf]  loading .
+2026-04-21T09:49:18.668663984Z [inf]  [railpack] secrets hash
+2026-04-21T09:49:18.758075893Z [inf]  loading .
+2026-04-21T09:49:18.761257207Z [inf]  copy / /app
+2026-04-21T09:49:18.832593546Z [inf]  copy / /app
+2026-04-21T09:49:18.839176183Z [inf]  mkdir -p /app/node_modules/.cache
+2026-04-21T09:49:18.965461089Z [inf]  mkdir -p /app/node_modules/.cache
+2026-04-21T09:49:18.968015187Z [inf]  npm ci
+2026-04-21T09:49:19.33976255Z [inf]  npm warn config production Use `--omit=dev` instead.
+
+2026-04-21T09:49:27.547837082Z [inf]  npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+
+2026-04-21T09:49:33.038131789Z [inf]  npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+
+2026-04-21T09:49:40.651624856Z [inf]  docker-image://ghcr.io/railwayapp/railpack-runtime:mise-2026.3.17
+2026-04-21T09:49:40.651716442Z [inf]  docker-image://ghcr.io/railwayapp/railpack-runtime:mise-2026.3.17
+2026-04-21T09:49:59.015464693Z [inf]  
+> nextjs_tailwind_shadcn_ts@0.2.0 postinstall
+> prisma generate
+
+
+2026-04-21T09:50:00.219487822Z [inf]  Prisma schema loaded from prisma/schema.prisma
+
+2026-04-21T09:50:00.553591638Z [inf]  ┌─────────────────────────────────────────────────────────┐
+│  Update available 6.19.2 -> 7.7.0                       │
+│                                                         │
+│  This is a major update - please follow the guide at    │
+│  https://pris.ly/d/major-version-upgrade                │
+│                                                         │
+│  Run the following to update                            │
+│    npm i --save-dev prisma@latest                       │
+│    npm i @prisma/client@latest                          │
+└─────────────────────────────────────────────────────────┘
+
+2026-04-21T09:50:00.553683097Z [inf]  
+✔ Generated Prisma Client (v6.19.2) to ./node_modules/@prisma/client in 126ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+Tip: Need your database queries to be 1000x faster? Accelerate offers you that and more: https://pris.ly/tip-2-accelerate
+
+
+2026-04-21T09:50:00.585446505Z [inf]  
+added 915 packages, and audited 916 packages in 41s
+
+2026-04-21T09:50:00.851672251Z [inf]  
+17 vulnerabilities (1 low, 6 moderate, 10 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+
+2026-04-21T09:50:03.183580887Z [inf]  npm ci
+2026-04-21T09:50:03.186774149Z [inf]  copy / /app
+2026-04-21T09:50:07.430680767Z [inf]  copy / /app
+2026-04-21T09:50:07.436734656Z [inf]  npm run build
+2026-04-21T09:50:07.804440565Z [inf]  npm warn config production Use `--omit=dev` instead.
+
+2026-04-21T09:50:07.833651449Z [inf]  
+> nextjs_tailwind_shadcn_ts@0.2.0 build
+> next build --webpack
+
+
+2026-04-21T09:50:08.959506848Z [inf]  ▲ Next.js 16.1.3 (webpack)
+
+2026-04-21T09:50:08.960061705Z [inf]  
+
+2026-04-21T09:50:08.990526792Z [inf]    Creating an optimized production build ...
+
+2026-04-21T09:50:09.117370632Z [inf]  ✓ (serwist) Bundling the service worker script with the URL '/sw.js' and the scope '/'...
+
+2026-04-21T09:50:19.744349431Z [inf]  create mise config
+2026-04-21T09:50:19.744630601Z [inf]  create mise config
+2026-04-21T09:50:20.057348016Z [inf]  ✓ Compiled successfully in 10.9s
+
+2026-04-21T09:50:20.059378109Z [inf]    Running TypeScript ...
+
+2026-04-21T09:50:31.538028552Z [inf]  Failed to compile.
+
+
+2026-04-21T09:50:31.538665153Z [inf]  ./src/app/api/hadith/route.backup.ts:84:14
+Type error: 'fallback' is possibly 'null'.
+
+[0m [90m 82 |[39m     [36mconst[39m fallback [33m=[39m [36mawait[39m getFallbackData()[33m;[39m
+ [90m 83 |[39m     [36mreturn[39m [33mNextResponse[39m[33m.[39mjson({
+[31m[1m>[22m[39m[90m 84 |[39m       daily[33m:[39m fallback[[33mMath[39m[33m.[39mfloor([33mMath[39m[33m.[39mrandom() [33m*[39m fallback[33m.[39mlength)][33m,[39m
+ [90m    |[39m              [31m[1m^[22m[39m
+ [90m 85 |[39m       collections[33m:[39m [33mHADITH_COLLECTIONS[39m[33m,[39m
+ [90m 86 |[39m       items[33m:[39m fallback[33m,[39m
+ [90m 87 |[39m       totalHadiths[33m:[39m fallback[33m.[39mlength[33m,[39m[0m
+
+2026-04-21T09:50:31.635729141Z [inf]  Next.js build worker exited with code: 1 and signal: null
+
+2026-04-21T09:50:32.249396541Z [err]  npm run build
+2026-04-21T09:50:32.278370991Z [err]  ERROR: failed to build: failed to solve: process "npm run build" did not complete successfully: exit code: 1

@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[context.production.environment]
+  NEXT_PUBLIC_VAPID_PUBLIC_KEY = "BDfKkya975WhlfmZAkyxvBaiInsvJ-RyqNIZXyhPWTIemqB8nfmrhLruP2r1Yizaw915G_qSZG8pMl6-f0xUIM8"
+  VAPID_PRIVATE_KEY = "6IDB6Vntsb7D9yTa18iCLP8KWsd4CzUL1IBc9pTl66I"
+  VAPID_SUBJECT = "mailto:zad-muslim@app.com"
