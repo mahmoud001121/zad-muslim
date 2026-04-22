@@ -468,9 +468,9 @@ export function MushafView() {
                 <button
                   onClick={() => { stop(); useAppStore.getState().setActiveTab('home'); }}
                   className="flex items-center justify-center rounded-xl p-2 text-amber-200/70 transition-colors hover:bg-amber-900/30 hover:text-amber-200"
-                  title={language === 'ar' ? 'الرئيسية' : 'Home'}
+                  title={language === 'ar' ? '🏠 الرئيسية' : '🏠 Home'}
                 >
-                  <Home size={16} />
+                  <Home size={18} className="text-amber-300" />
                 </button>
                 <button
                   onClick={() => setShowSurahIndex(true)}
