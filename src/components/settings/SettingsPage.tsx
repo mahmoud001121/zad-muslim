@@ -23,13 +23,16 @@ import {
   Search,
   Loader2,
   Clock,
-  AlertCircle
+  AlertCircle,
+  Play,
+  Pause,
 } from 'lucide-react';
 import { useState, useCallback, useMemo, useEffect } from 'react';
 import { useSettingsStore } from '@/store/settings-store';
 import { TRANSLATIONS, RECITERS, PRAYER_METHODS, MADHAB_OPTIONS, ADHAN_SOUNDS, SALAWAT_INTERVALS } from '@/lib/constants';
 import { usePushNotifications } from '@/hooks/usePushNotifications';
 import { useGeolocation } from '@/hooks/useGeolocation';
+import { useAdhanPlayer } from '@/hooks/useAdhanPlayer';
 
 // Popular Egyptian cities
 const POPULAR_CITIES = [
@@ -230,6 +233,7 @@ export default function SettingsPage({ onBack }: { onBack?: () => void }) {
 
   const { subscribed, loading: pushLoading, subscribe, unsubscribe, updateSubscription } = usePushNotifications();
   const { requestLocation, isLoading: geoLoading, error: geoError } = useGeolocation();
+  const { playAdhanPreview, pauseAdhan, isPlaying: adhanIsPlaying } = useAdhanPlayer();
 
   const [searchCity, setSearchCity] = useState('');
   const [isSearching, setIsSearching] = useState(false);
@@ -748,13 +752,30 @@ export default function SettingsPage({ onBack }: { onBack?: () => void }) {
                           <p className="text-sm font-semibold text-text-primary">{isAr ? 'نوع الأذان' : 'Muezzin'}</p>
                         </div>
                       </div>
-                      <SelectionDrawer
-                        label={isAr ? 'اختر المؤذن' : 'Choose Adhan'}
-                        value={adhanSound}
-                        options={ADHAN_SOUNDS}
-                        lang={language}
-                        onSelect={(v) => updateSettings({ adhanSound: v as string })}
-                      />
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => adhanIsPlaying ? pauseAdhan() : playAdhanPreview(adhanSound)}
+                          className={`w-9 h-9 rounded-lg border flex items-center justify-center transition-all ${
+                            adhanIsPlaying
+                              ? 'bg-zad-gold/20 border-zad-gold text-zad-gold'
+                              : 'bg-zad-surface border-zad-border/60 text-text-secondary hover:border-zad-gold/40 hover:text-zad-gold'
+                          }`}
+                        >
+                          {adhanIsPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                        </button>
+                        <SelectionDrawer
+                          label={isAr ? 'اختر المؤذن' : 'Choose Adhan'}
+                          value={adhanSound}
+                          options={ADHAN_SOUNDS}
+                          lang={language}
+                          onSelect={(v) => {
+                            const key = v as string;
+                            updateSettings({ adhanSound: key });
+                            pauseAdhan();
+                            playAdhanPreview(key);
+                          }}
+                        />
+                      </div>
                     </SettingCard>
                   )}
 
@@ -796,9 +817,9 @@ export default function SettingsPage({ onBack }: { onBack?: () => void }) {
                         onSelect={(v) => updateSettings({ salawatInterval: v as number })}
                       />
                     </SettingCard>
-                )}
+                  )}
                   </div>
-              </motion.div>
+                </motion.div>
             )}
           </AnimatePresence>
         </section>

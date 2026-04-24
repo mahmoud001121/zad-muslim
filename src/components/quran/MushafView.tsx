@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import { Fragment, useState, useCallback, useEffect, useRef } from 'react';
@@ -140,7 +139,7 @@ export function MushafView() {
   const cacheSetPage = useQuranCache((s) => s.setPage);
 
   // Fetch current page — cache-first strategy
-  const { data, isLoading } = useQuery<PageData>({
+  const { data, isLoading, isError, error, refetch } = useQuery<PageData>({
     queryKey: ['quran-page', currentPage],
     queryFn: async () => {
       const res = await fetch(`/api/quran?action=page&pageNumber=${currentPage}`);
@@ -230,6 +229,30 @@ export function MushafView() {
     prefetchPage(currentPage - 1);
     prefetchPage(currentPage + 1);
   }, [currentPage, prefetchPage]);
+
+  // Auto-retry when connectivity restores
+  useEffect(() => {
+    const handleOnline = () => {
+      console.log('[MushafView] Online restored, retrying...');
+      refetch();
+    };
+    window.addEventListener('online', handleOnline);
+    return () => window.removeEventListener('online', handleOnline);
+  }, [refetch]);
+
+  // Find nearest cached page to current
+  const lastCachedPage = (() => {
+    if (cacheGetPage(currentPage)) return currentPage;
+    let lower = currentPage - 1;
+    let upper = currentPage + 1;
+    while (lower >= 1 || upper <= 604) {
+      if (lower >= 1 && cacheGetPage(lower)) return lower;
+      if (upper <= 604 && cacheGetPage(upper)) return upper;
+      lower--;
+      upper++;
+    }
+    return 1;
+  })();
 
   // Scroll to top on page change
   useEffect(() => {
@@ -598,6 +621,31 @@ export function MushafView() {
                 />
               </motion.div>
             </AnimatePresence>
+          ) : isError ? (
+            <div className="flex min-h-[100dvh] w-full flex-col items-center justify-center gap-4 p-4 text-center">
+              <div className="rounded-2xl border border-amber-900/40 bg-[#1a1510] p-6 shadow-2xl max-w-sm">
+                <p className="arabic-display text-lg text-amber-100 mb-2">
+                  هذه الصفحة غير متوفرة بدون إنترنت
+                </p>
+                <p className="text-amber-200/70 text-sm mb-4">
+                  This page is not available offline
+                </p>
+                <div className="flex gap-2 justify-center">
+                  <button
+                    onClick={() => refetch()}
+                    className="flex h-10 items-center justify-center rounded-lg bg-amber-600 px-4 text-sm font-medium text-amber-950 transition-colors hover:bg-amber-500"
+                  >
+                    Retry
+                  </button>
+                  <button
+                    onClick={() => setPage(lastCachedPage)}
+                    className="flex h-10 items-center justify-center rounded-lg border border-amber-900/40 px-4 text-sm font-medium text-amber-200 transition-colors hover:bg-amber-900/20"
+                  >
+                    Go back
+                  </button>
+                </div>
+              </div>
+            </div>
           ) : null}
         </div>
       </div>
