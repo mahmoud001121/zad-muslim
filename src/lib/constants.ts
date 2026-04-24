@@ -160,10 +160,10 @@ export const PRAYER_REMINDER_INTERVALS = [
 ];
 
 export const SALAWAT_INTERVALS = [
-  { value: 1, nameEn: "Every 1 Minute", nameAr: "كل دقيقة" },
-  { value: 5, nameEn: "Every 5 Minutes", nameAr: "كل 5 دقائق" },
-  { value: 10, nameEn: "Every 10 Minutes", nameAr: "كل 10 دقائق" },
-  { value: 15, nameEn: "Every 15 Minutes", nameAr: "كل 15 دقيقة" },
-  { value: 30, nameEn: "Every 30 Minutes", nameAr: "كل 30 دقيقة" },
-  { value: 60, nameEn: "Every 1 Hour", nameAr: "كل ساعة" },
+  { value: 1, name: "Every 1 Minute", nameAr: "كل دقيقة" },
+  { value: 5, name: "Every 5 Minutes", nameAr: "كل 5 دقائق" },
+  { value: 10, name: "Every 10 Minutes", nameAr: "كل 10 دقائق" },
+  { value: 15, name: "Every 15 Minutes", nameAr: "كل 15 دقيقة" },
+  { value: 30, name: "Every 30 Minutes", nameAr: "كل 30 دقيقة" },
+  { value: 60, name: "Every 1 Hour", nameAr: "كل ساعة" },
 ];
