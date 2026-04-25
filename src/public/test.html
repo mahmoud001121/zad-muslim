@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Audio Test</title>
+</head>
+<body>
+    <h2>Test Audio Stream</h2>
+    <button id="playBtn">Play Test Stream</button>
+    <p id="status">Ready</p>
+    
+    <script>
+        const testUrl = "https://backup.qurango.net/radio/mishary_alafasi";
+        const audio = new Audio();
+        
+        document.getElementById('playBtn').addEventListener('click', async () => {
+            const status = document.getElementById('status');
+            status.textContent = 'Loading...';
+            
+            audio.src = testUrl;
+            audio.crossOrigin = 'anonymous';
+            
+            try {
+                await audio.play();
+                status.textContent = 'Playing! ✅';
+            } catch (err) {
+                status.textContent = 'Error: ' + err.message;
+                console.error('Audio error:', err);
+            }
+        });
+        
+        audio.addEventListener('error', (e) => {
+            console.error('Audio element error:', audio.error);
+        });
+    </script>
+</body>
+</html>
